@@ -102,6 +102,10 @@
                     </LocalAccount>
                 </LocalAccounts>
             </UserAccounts>
+            <Display>
+                <HorizontalResolution>1280</HorizontalResolution>
+                <VerticalResolution>800</VerticalResolution>
+            </Display>
         </component>
     </settings>
     <settings pass="auditSystem">
