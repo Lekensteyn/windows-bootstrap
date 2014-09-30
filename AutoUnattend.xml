@@ -11,7 +11,6 @@
             <selection name="Printing-Foundation-InternetPrinting-Client" state="false" />
             <selection name="MSRDC-Infrastructure" state="false" />
             <selection name="MediaPlayback" state="false" />
-            <selection name="SearchEngine-Client-Package" state="false" />
             <selection name="WindowsGadgetPlatform" state="false" />
         </package>
     </servicing>
