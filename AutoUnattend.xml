@@ -13,6 +13,12 @@
             <selection name="MediaPlayback" state="false" />
             <selection name="WindowsGadgetPlatform" state="false" />
         </package>
+        <package action="configure">
+            <assemblyIdentity name="Microsoft-Windows-HomeBasicEdition" version="6.1.7601.17514" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="" />
+            <selection name="Microsoft-Windows-MediaPlayer-Package" state="false" />
+            <selection name="Microsoft-Windows-Anytime-Upgrade-Package" state="false" />
+            <selection name="Microsoft-Windows-Printing-XPSServices-Package" state="false" />
+        </package>
     </servicing>
     <settings pass="windowsPE">
         <component name="Microsoft-Windows-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -57,9 +63,6 @@
                 </OSImage>
             </ImageInstall>
             <UserData>
-                <ProductKey>
-                    <WillShowUI>OnError</WillShowUI>
-                </ProductKey>
                 <AcceptEula>true</AcceptEula>
             </UserData>
             <PageFile>
