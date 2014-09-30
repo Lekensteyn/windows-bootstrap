@@ -139,6 +139,7 @@
             <ComputerName>QEMU</ComputerName>
             <DisableAutoDaylightTimeSet>false</DisableAutoDaylightTimeSet>
             <TimeZone>W. Europe Standard Time</TimeZone>
+            <ShowWindowsLive>false</ShowWindowsLive>
         </component>
     </settings>
     <cpi:offlineImage cpi:source="wim:d:/sources/install.wim#Windows 7 HOMEBASIC" xmlns:cpi="urn:schemas-microsoft-com:cpi" />
