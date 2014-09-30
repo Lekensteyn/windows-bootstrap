@@ -95,6 +95,10 @@
                         <Name>User</Name>
                         <Group>Administrators</Group>
                         <DisplayName></DisplayName>
+                        <Password>
+                            <Value>UABhAHMAcwB3AG8AcgBkAA==</Value>
+                            <PlainText>false</PlainText>
+                        </Password>
                     </LocalAccount>
                 </LocalAccounts>
             </UserAccounts>
