@@ -154,7 +154,7 @@
         <component name="Microsoft-Windows-IE-InternetExplorer" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             <DisableFirstRunWizard>true</DisableFirstRunWizard>
             <DisableOOBAccelerators>true</DisableOOBAccelerators>
-            <Home_Page>http://10.42.0.2:8888/</Home_Page>
+            <Home_Page>http://10.0.2.2:8888/</Home_Page>
             <SuggestedSitesEnabled>false</SuggestedSitesEnabled>
             <DisableAccelerators>true</DisableAccelerators>
         </component>
