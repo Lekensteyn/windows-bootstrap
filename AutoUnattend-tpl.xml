@@ -13,12 +13,21 @@
             <selection name="MediaPlayback" state="false" />
             <selection name="WindowsGadgetPlatform" state="false" />
         </package>
+<!-- Edition: HomeBasic -->
         <package action="configure">
             <assemblyIdentity name="Microsoft-Windows-HomeBasicEdition" version="6.1.7601.17514" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="" />
             <selection name="Microsoft-Windows-MediaPlayer-Package" state="false" />
             <selection name="Microsoft-Windows-Anytime-Upgrade-Package" state="false" />
             <selection name="Microsoft-Windows-Printing-XPSServices-Package" state="false" />
         </package>
+<!-- Edition: HomePremium -->
+        <package action="configure">
+            <assemblyIdentity name="Microsoft-Windows-HomePremiumEdition" version="6.1.7601.17514" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="" />
+            <selection name="Microsoft-Windows-Anytime-Upgrade-Package" state="false" />
+            <selection name="Microsoft-Windows-Printing-XPSServices-Package" state="false" />
+            <selection name="OpticalMediaDisc" state="false" />
+        </package>
+<!-- End -->
     </servicing>
     <settings pass="windowsPE">
         <component name="Microsoft-Windows-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -57,14 +66,22 @@
                     <InstallFrom>
                         <MetaData wcm:action="add">
                             <Key>/IMAGE/NAME</Key>
+<!-- Edition: HomeBasic -->
                             <Value>Windows 7 HOMEBASIC</Value>
+<!-- Edition: HomePremium -->
+                            <Value>Windows 7 HOMEPREMIUM</Value>
+<!-- End -->
                         </MetaData>
                     </InstallFrom>
                 </OSImage>
             </ImageInstall>
             <UserData>
                 <ProductKey>
+<!-- Edition: HomeBasic -->
                     <Key>YGFVB-QTFXQ-3H233-PTWTJ-YRYRV</Key>
+<!-- Edition: HomePremium -->
+                    <Key>RHPQ2-RMFJH-74XYM-BH4JX-XM76F</Key>
+<!-- End -->
                     <WillShowUI>OnError</WillShowUI>
                 </ProductKey>
                 <AcceptEula>true</AcceptEula>
@@ -150,5 +167,9 @@
             <DisableAccelerators>true</DisableAccelerators>
         </component>
     </settings>
+<!-- Edition: HomeBasic -->
     <cpi:offlineImage cpi:source="wim:d:/sources/install.wim#Windows 7 HOMEBASIC" xmlns:cpi="urn:schemas-microsoft-com:cpi" />
+<!-- Edition: HomePremium -->
+    <cpi:offlineImage cpi:source="wim:d:/sources/install.wim#Windows 7 HOMEPREMIUM" xmlns:cpi="urn:schemas-microsoft-com:cpi" />
+<!-- End -->
 </unattend>
