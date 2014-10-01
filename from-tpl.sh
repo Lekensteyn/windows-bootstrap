@@ -8,7 +8,7 @@
 
 edition=$(echo "$1" | tr '[:upper:]' '[:lower:]')
 thisdir=$(dirname "$0")
-output=${2:-$thisdir/AutoUnattend.xml}
+output=${2:-$thisdir/wsim/AutoUnattend.xml}
 
 # Select edition with some aliases.
 case ${edition} in
@@ -24,7 +24,7 @@ ultimate)
     cat <USAGE
 Usage: $0 {HomeBasic | HomePremium | Professional | Ultimate} [AutoUnattend.xml]
 
-The default output file is AutoUnattend.xml, use '-' to write to stdout.
+The default output file is wsim/AutoUnattend.xml, use '-' to write to stdout.
 USAGE
     exit 1
     ;;
