@@ -112,6 +112,14 @@
                     </LocalAccount>
                 </LocalAccounts>
             </UserAccounts>
+            <FirstLogonCommands>
+                <!-- Microsoft-Windows-Deployment runs too early, so use this -->
+                <SynchronousCommand wcm:action="add">
+                    <Order>1</Order>
+                    <CommandLine>%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe -executionpolicy bypass %SystemRoot%\ConfigSetRoot\Firstrun\setup.ps1</CommandLine>
+                    <Description>Run post-installation scripts</Description>
+                </SynchronousCommand>
+            </FirstLogonCommands>
             <Display>
                 <ColorDepth>32</ColorDepth>
                 <HorizontalResolution>1280</HorizontalResolution>
