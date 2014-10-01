@@ -27,6 +27,24 @@
             <selection name="Microsoft-Windows-Printing-XPSServices-Package" state="false" />
             <selection name="OpticalMediaDisc" state="false" />
         </package>
+<!-- Edition: Professional -->
+        <package action="configure">
+            <assemblyIdentity name="Microsoft-Windows-ProfessionalEdition" version="6.1.7601.17514" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="" />
+            <selection name="Microsoft-Hyper-V-Common-Drivers" state="false" />
+            <selection name="Microsoft-Hyper-V-Guest-Integration-Drivers" state="false" />
+            <selection name="Microsoft-Windows-Anytime-Upgrade-Package" state="false" />
+            <selection name="Microsoft-Windows-MediaPlayer-Package" state="false" />
+            <selection name="Microsoft-Windows-Printing-XPSServices-Package" state="false" />
+            <selection name="OpticalMediaDisc" state="false" />
+        </package>
+<!-- Edition: Ultimate -->
+        <package action="configure">
+            <assemblyIdentity name="Microsoft-Windows-UltimateEdition" version="6.1.7601.17514" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="" />
+            <selection name="Microsoft-Hyper-V-Common-Drivers" state="false" />
+            <selection name="Microsoft-Hyper-V-Guest-Integration-Drivers" state="false" />
+            <selection name="Microsoft-Windows-Printing-XPSServices-Package" state="false" />
+            <selection name="OpticalMediaDisc" state="false" />
+        </package>
 <!-- End -->
     </servicing>
     <settings pass="windowsPE">
@@ -70,6 +88,10 @@
                             <Value>Windows 7 HOMEBASIC</Value>
 <!-- Edition: HomePremium -->
                             <Value>Windows 7 HOMEPREMIUM</Value>
+<!-- Edition: Professional -->
+                            <Value>Windows 7 PROFESSIONAL</Value>
+<!-- Edition: Ultimate -->
+                            <Value>Windows 7 ULTIMATE</Value>
 <!-- End -->
                         </MetaData>
                     </InstallFrom>
@@ -81,6 +103,10 @@
                     <Key>YGFVB-QTFXQ-3H233-PTWTJ-YRYRV</Key>
 <!-- Edition: HomePremium -->
                     <Key>RHPQ2-RMFJH-74XYM-BH4JX-XM76F</Key>
+<!-- Edition: Professional -->
+                    <Key>HYF8J-CVRMY-CM74G-RPHKF-PW487</Key>
+<!-- Edition: Ultimate -->
+                    <Key>D4F6K-QK3RD-TMVMJ-BBMRX-3MBMV</Key>
 <!-- End -->
                     <WillShowUI>OnError</WillShowUI>
                 </ProductKey>
@@ -171,5 +197,9 @@
     <cpi:offlineImage cpi:source="wim:d:/sources/install.wim#Windows 7 HOMEBASIC" xmlns:cpi="urn:schemas-microsoft-com:cpi" />
 <!-- Edition: HomePremium -->
     <cpi:offlineImage cpi:source="wim:d:/sources/install.wim#Windows 7 HOMEPREMIUM" xmlns:cpi="urn:schemas-microsoft-com:cpi" />
+<!-- Edition: Professional -->
+    <cpi:offlineImage cpi:source="wim:d:/sources/install.wim#Windows 7 PROFESSIONAL" xmlns:cpi="urn:schemas-microsoft-com:cpi" />
+<!-- Edition: Ultimate -->
+    <cpi:offlineImage cpi:source="wim:d:/sources/install.wim#Windows 7 ULTIMATE" xmlns:cpi="urn:schemas-microsoft-com:cpi" />
 <!-- End -->
 </unattend>
