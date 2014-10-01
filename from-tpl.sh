@@ -21,7 +21,7 @@ professional|pro)
 ultimate)
     edition=Ultimate ;;
 *)
-    cat <USAGE
+    cat <<USAGE
 Usage: $0 {HomeBasic | HomePremium | Professional | Ultimate} [AutoUnattend.xml]
 
 The default output file is wsim/AutoUnattend.xml, use '-' to write to stdout.
