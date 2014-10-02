@@ -25,11 +25,20 @@ New-Item $key -Force
 Set-RegProperty $key "{20D04FE0-3AEA-1069-A2D8-08002B30309D}" 0
 #Stop-Process -processname explorer
 
+# Disable automatic pagefile management
+$cs = gwmi Win32_ComputerSystem
+if ($cs.AutomaticManagedPagefile) {
+    $cs.AutomaticManagedPagefile = $False
+    $cs.Put()
+}
 # Disable a single pagefile if any
 $pg = gwmi win32_pagefilesetting
 if ($pg) {
     $pg.Delete()
 }
+
+# Disable hibernation
+& powercfg /h off
 
 # Try to activate Windows if not already activated
 $act = cscript $env:SystemRoot\System32\slmgr.vbs /dli
