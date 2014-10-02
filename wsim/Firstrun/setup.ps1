@@ -2,15 +2,28 @@
 $PSScriptRoot = Split-Path $MyInvocation.MyCommand.Path -Parent
 $needsReboot = $False
 
-# Unhide files in Explorer
-$key = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced'
+function Set-RegProperty($key, $name, $value, $type="dword") {
+    # Forcefully create a property, assuming that $key already exists
+    New-ItemProperty "$key" "$name" -PropertyType $type -Value "$value" -Force
+}
+
+# Configure Windows Explorer properties
+$explorer_key = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer"
+
+$key = "$explorer_key\Advanced"
+New-Item $key -Force
 # Show hidden files, folders, and drives
-Set-ItemProperty $key Hidden 1
+Set-RegProperty $key Hidden 1
 # Hide extensions for known file types
-Set-ItemProperty $key HideFileExt 0
+Set-RegProperty $key HideFileExt 0
 # Hide protected operating system files (Recommended)
-Set-ItemProperty $key ShowSuperHidden 1
-Stop-Process -processname explorer
+Set-RegProperty $key ShowSuperHidden 1
+
+$key = "$explorer_key\HideDesktopIcons\NewStartPanel"
+New-Item $key -Force
+# Show "Computer" desktop icon"
+Set-RegProperty $key "{20D04FE0-3AEA-1069-A2D8-08002B30309D}" 0
+#Stop-Process -processname explorer
 
 # Disable a single pagefile if any
 $pg = gwmi win32_pagefilesetting
