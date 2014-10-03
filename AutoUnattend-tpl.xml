@@ -162,6 +162,11 @@
                     <CommandLine>%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe -executionpolicy bypass %SystemRoot%\ConfigSetRoot\Firstrun\setup.ps1</CommandLine>
                     <Description>Run post-installation scripts</Description>
                 </SynchronousCommand>
+                <SynchronousCommand wcm:action="add">
+                    <Order>2</Order>
+                    <CommandLine>cmd /c del /s /q /f %SystemRoot%\ConfigSetRoot</CommandLine>
+                    <Description>Remove post-installation scripts</Description>
+                </SynchronousCommand>
             </FirstLogonCommands>
             <Display>
                 <ColorDepth>32</ColorDepth>
