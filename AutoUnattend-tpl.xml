@@ -164,7 +164,7 @@
                 </SynchronousCommand>
                 <SynchronousCommand wcm:action="add">
                     <Order>2</Order>
-                    <CommandLine>cmd /c del /s /q /f %SystemRoot%\ConfigSetRoot</CommandLine>
+                    <CommandLine>cmd /c rd /s /q %SystemRoot%\ConfigSetRoot</CommandLine>
                     <Description>Remove post-installation scripts</Description>
                 </SynchronousCommand>
             </FirstLogonCommands>
