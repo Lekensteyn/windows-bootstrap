@@ -197,6 +197,9 @@
             <SuggestedSitesEnabled>false</SuggestedSitesEnabled>
             <DisableAccelerators>true</DisableAccelerators>
         </component>
+        <component name="Microsoft-Windows-SystemRestore-Main" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <DisableSR>1</DisableSR>
+        </component>
     </settings>
 <!-- Edition: HomeBasic -->
     <cpi:offlineImage cpi:source="wim:d:/sources/install.wim#Windows 7 HOMEBASIC" xmlns:cpi="urn:schemas-microsoft-com:cpi" />
