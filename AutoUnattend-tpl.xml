@@ -54,7 +54,8 @@
                     <CreatePartitions>
                         <CreatePartition wcm:action="add">
                             <Order>1</Order>
-                            <Size>16000</Size>
+                            <!-- 12 GiB - 2M -->
+                            <Size>12286</Size>
                             <Type>Primary</Type>
                         </CreatePartition>
                     </CreatePartitions>
